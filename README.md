@@ -3,65 +3,60 @@ This repository contains implementations of multiple recommendation systems for 
 
 Recommendation Systems Implemented
 Recommendation System 1: Collaborative Model
-Description: Uses TensorFlow and TensorFlow Recommenders to build a Hybrid Model recommendation system.
+Description: This model is a recommendation system for MovieLens dataset using TensorFlow Recommenders (TFRS). 
 
 Dataset: Movielens 100k dataset.
 
 Features:
 
-Load the MovieLens dataset using tensorflow_datasets.
+1. Loads and preprocesses MovieLens 100k dataset for user-movie ratings.
+  
+2. Defines a custom recommendation model using TensorFlow Recommenders (TFRS).
+ 
+4. Trains the model with Adagrad optimizer and evaluates using Factorized Top-K metrics.
 
-Select relevant features and prepare the vocabulary for user IDs and movie titles.
+5. Implements brute-force search for efficient movie retrieval based on learned embeddings.
 
-Create UserModel and MovieModel classes to generate embeddings.
+6. Provides personalized movie recommendations for users based on their preferences.
 
-Define a HybridModel class that uses these embeddings to compute a retrieval task.
-
-Train the model on the dataset. Evaluate the model by making recommendations for a sample user and displaying the results.
 
 Recommendation System 2: Matrix Factorization Based Model
-Description: Implements Softmax Deep Neural Network Model using Keras.
+Description:  A recommendation system technique that decomposes user-item interaction data into latent factors to predict missing values, used for collaborative filtering.
 
 Dataset: Movielens 100k dataset.
 
 Features:
 
-Download and unzip the MovieLens dataset. Merge and refine the dataset to group ratings by user and movie. Encode user IDs and movie titles.
+1. Loads MovieLens 100k dataset, extracts user IDs, movie titles, and ratings, preparing them for training a recommender model.
 
-Use Keras to define a deep neural network model with user and movie embeddings.
+2. Constructs a Matrix Factorization model using TensorFlow, consisting of user and movie embedding layers optimized with Adagrad for collaborative filtering.
 
-Add dense layers with dropout and activation functions to the model.
+3. Defines evaluation functions to assess model performance using RMSE, NDCG, and MRR, ensuring accurate recommendation quality measurement.
 
-Train the model on the training set and evaluate it on the test set. Plot the training and validation loss over epochs.
+4. Trains the model on ratings data to learn embeddings, evaluates its effectiveness in recommending movies based on user preferences.
 
-Make movie recommendations for a sample user based on the trained model.
+5. Generates top-k movie recommendations for users by leveraging learned embeddings and ranking scores, enhancing personalized user experiences in recommendation systems.
 
 Recommendation System 3: Neural Collaborative Filtering Model
-Description: Implements K-Nearest Neighbors (KNN) Model for recommendations.
+Description: NCF models leverage neural networks to learn user-item interactions for enhanced collaborative filtering, providing personalized recommendations based on user preferences and item characteristics."
 
-Dataset: Movielens 25m dataset.
+Dataset: Movielens 100k dataset.
 
 Features:
 
-Load the MovieLens dataset. Create a user-item matrix and remove movies with low ratings frequency. Filter active users who have rated more than a threshold number of movies.
+1. Loads and preprocesses MovieLens 100k dataset for ratings and movie titles using TensorFlow Datasets.
 
-Use the NearestNeighbors class from sklearn to create a KNN model.
+2. Defines embeddings and vocabularies for user IDs and movie titles.
 
-Fit the model on the user-item matrix and make movie recommendations for a sample movie.
+3. Constructs a Neural Collaborative Filtering (NCF) model using TensorFlow Recommenders for personalized movie recommendations.
 
-Setup and Usage
-Running the Recommendation Systems:
-Each recommendation system is contained in one colab notebook Movies_Recommendation_System.ipynb.
+4. Trains the model with rating prediction and evaluates using metrics like Root Mean Squared Error, NDCG, and MRR.
 
-Open and execute the notebook to explore each recommendation system.
+5. Provides top movie recommendations for a given user based on learned embeddings and user-item interactions.
+
 
 Datasets:
-The Movielens datasets (ml-100k and ml-25m) are used. You can download them from the Movielens website.
+The Movielens datasets (ml-100k) are used. You can download them from the Movielens website.
 
-Dataset
-
-Dependencies:
-TensorFlow, TensorFlow Recommenders, TensorFlow Datasets, Scikit-learn, Pandas, NumPy, Keras
-
-Author
-@bKarthi22 S
+Dataset Dependencies:
+TensorFlow, TensorFlow Recommenders, TensorFlow Datasets, NumPy, Keras
