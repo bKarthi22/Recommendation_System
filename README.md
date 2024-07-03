@@ -62,3 +62,6 @@ The Movielens datasets (ml-100k) are used. You can download them from the Moviel
 
 Dataset Dependencies:
 TensorFlow, TensorFlow Recommenders, TensorFlow Datasets, NumPy, Keras
+
+## Author : 
+[Karthikeyan B](https://github.com/bKarthi22)
