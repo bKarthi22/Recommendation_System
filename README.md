@@ -4,11 +4,11 @@ This repository contains implementations of multiple recommendation systems for 
 ## Recommendation Systems Implemented
 
 ### Recommendation System 1: Collaborative Model
-*Description:*  This model is a recommendation system for MovieLens dataset using TensorFlow Recommenders (TFRS). 
+**Description:**  This model is a recommendation system for MovieLens dataset using TensorFlow Recommenders (TFRS). 
 
-*Dataset:* Movielens 100k dataset.
+**Dataset:** Movielens 100k dataset.
 
-*Features:*
+**Features:**
 
 1. Loads and preprocesses MovieLens 100k dataset for user-movie ratings.
   
@@ -22,11 +22,11 @@ This repository contains implementations of multiple recommendation systems for 
 
 
 ### Recommendation System 2: Matrix Factorization Based Model
-*Description:*  A recommendation system technique that decomposes user-item interaction data into latent factors to predict missing values, used for collaborative filtering.
+**Description:**  A recommendation system technique that decomposes user-item interaction data into latent factors to predict missing values, used for collaborative filtering.
 
-*Dataset:* Movielens 100k dataset.
+**Dataset:** Movielens 100k dataset.
 
-*Features:*
+**Features:**
 
 1. Loads MovieLens 100k dataset, extracts user IDs, movie titles, and ratings, preparing them for training a recommender model.
 
@@ -40,11 +40,11 @@ This repository contains implementations of multiple recommendation systems for 
 
 
 ### Recommendation System 3: Neural Collaborative Filtering Model
-*Description:* NCF models leverage neural networks to learn user-item interactions for enhanced collaborative filtering, providing personalized recommendations based on user preferences and item characteristics."
+**Description:** NCF models leverage neural networks to learn user-item interactions for enhanced collaborative filtering, providing personalized recommendations based on user preferences and item characteristics."
 
-*Dataset:* Movielens 100k dataset.
+**Dataset:** Movielens 100k dataset.
 
-*Features:*
+**Features:**
 
 1. Loads and preprocesses MovieLens 100k dataset for ratings and movie titles using TensorFlow Datasets.
 
